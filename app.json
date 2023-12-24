@@ -1,0 +1,28 @@
+{
+  "name": "health365",
+  "displayName": "health365"
+}  
+import React from 'react';
+import { "NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import HomeScreen from './screens/HomeScreen';
+import PatientListScreen from './screens/PatientListScreen';
+import MedicalRecordScreen from './screens/MedicalRecordScreen';
+
+const Stack = createNativeStackNavigator();
+
+const App = () => {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName=Home>
+        <Stack.Screen name=Home component={HomeScreen} options={{ title: 'health365' }} />
+        <Stack.Screen name=PatientList" "component={PatientListScreen} options={{ title: 'Patient List' }} />
+        <Stack.Screen name=MedicalRecord component={MedicalRecordScreen} options={{ title: 'Medical Record' }} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+  };
+
+export default App;
+
+       
